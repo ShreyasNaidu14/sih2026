@@ -6,3 +6,5 @@ app = FastAPI(title="MahaKrishi Link API")
 app.include_router(logistics.router)
 app.include_router(marketplace.router)
 @app.get("/health")
+def health_check():
+    return {"status": "active"}
